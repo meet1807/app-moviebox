@@ -12,9 +12,10 @@
 4. create a Home component to hold all other components.
 5. create movieBlock, card, row components(Reusable) to fetch data from backend and display it.
 6. Add lazy load functionality to images - renders images that can be visiable on the viewports at a time. Increases the component loading performance and decreases the time it take to render it. also it downloads the images when it will be visible in the viewport(screen). so site loads faster ( Smooth experience)
-7. Add Blur up functionality so when images load it doesn't feel like abrupt jumps for smoother experience.
-8. Add jumbotron to give information about this app. (Static component)
-9. Add Banner component at the top of the website below nav-bar.
-10. Add NavBar with links to home genres( action, romance, comedy, documentry) ,login ,search funtionality.
-11. Add footer
-12.
+   Read the whole blog here by Malcolm Laing :
+   https://medium.com/frontend-digest/progressively-loading-images-in-react-107cb075417a
+7. Add jumbotron to give information about this app. (Static component)
+8. Add Banner component at the top of the website below nav-bar.
+9. Add NavBar with links to home genres( action, romance, comedy, documentry) ,login ,search funtionality.
+10. Add footer
+11.
