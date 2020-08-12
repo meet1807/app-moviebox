@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import Row from "../row/Row";
 import Card from "../card/Card";
 import axios from "axios";
+import "./movieBlock.css";
 
 const MovieBlock = ({ title, fetchURL }) => {
+  const basicURL = "/api/fetchMovies";
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -11,7 +13,7 @@ const MovieBlock = ({ title, fetchURL }) => {
       try {
         const {
           data: { results },
-        } = await axios.get(fetchURL);
+        } = await axios.get(basicURL + fetchURL);
         setMovies(results);
         return results;
       } catch (error) {
@@ -23,8 +25,12 @@ const MovieBlock = ({ title, fetchURL }) => {
 
   return (
     <div>
-      <Row title={title} />
-      <Card data={movies} />
+      <div className="container-fluid ">
+        <Row title={title} />
+        <div className="row movie_container">
+          <Card data={movies} />
+        </div>
+      </div>
     </div>
   );
 };

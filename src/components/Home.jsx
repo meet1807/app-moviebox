@@ -3,14 +3,11 @@ import MovieBlock from "./common/movieBlock/MovieBlock";
 
 const Home = () => {
   return (
-    <main role="main">
-      <MovieBlock
-        title="Latest Movies"
-        fetchURL="/api/fetchMovies/fetchTrending"
-      />
-      {/* <MovieBlock title="Netflix Originals" data="" />
-      <MovieBlock title="Latest Tv Shows" data="" /> */}
-    </main>
+    <div className="container-fluid">
+      <MovieBlock title="Latest Movies" fetchURL="/fetchTrending" />
+      <MovieBlock title="Netflix Originals" fetchURL="/fetchNetflixOriginal" />
+      <MovieBlock title="Latest Tv Shows" fetchURL="/fetchPopularTv" />
+    </div>
   );
 };
 
