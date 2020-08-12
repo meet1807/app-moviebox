@@ -6,6 +6,7 @@ import "./movieBlock.css";
 
 const MovieBlock = ({ title, fetchURL }) => {
   const basicURL = "/api/fetchMovies";
+  const baseImageURL = "https://image.tmdb.org/t/p/original";
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -28,7 +29,13 @@ const MovieBlock = ({ title, fetchURL }) => {
       <div className="container-fluid ">
         <Row title={title} />
         <div className="row movie_container">
-          <Card data={movies} />
+          {movies.map((movie) => (
+            <Card
+              key={movie.id}
+              title={movie.name}
+              path={`${baseImageURL}${movie.poster_path}`}
+            />
+          ))}
         </div>
       </div>
     </div>
