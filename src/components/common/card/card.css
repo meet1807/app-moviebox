@@ -2,7 +2,7 @@
   margin-bottom: 30px;
 }
 .poster {
-  object-fit: scale-down;
+  object-fit: contain;
   width: 100%;
   max-height: 40vh;
   transition: transform 450ms;
@@ -10,6 +10,17 @@
 
 .poster:hover {
   transform: scale(1.1);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0),
+    rgba(0, 0, 0, 0.8)
+  );
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0),
+    rgba(0, 0, 0, 0.8)
+  );
 }
 
 .like {
