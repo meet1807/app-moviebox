@@ -4,13 +4,13 @@
 .poster {
   object-fit: contain;
   width: 100%;
-  max-height: 40vh;
+  max-height: 30vh; /* 40 */
   transition: transform 450ms;
 }
 
 .poster:hover {
   transform: scale(1.1);
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
+  /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0), rgba(0, 0, 0, 0.5));
   -webkit-mask-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0),
@@ -20,21 +20,34 @@
     to top,
     rgba(0, 0, 0),
     rgba(0, 0, 0, 0.8)
-  );
+  ); */
 }
 
-.like {
+/*.like {
   flex: 2;
-  /* position: absolute;
+  position: absolute;
   top: 10%;
   left: 85%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  /* background-color: #555; */
-  /* color: black;
-  /* font-size: 1px; */
-  /* padding: 12px 24px;
+  background-color: #555; 
+  color: black;
+  font-size: 1px; 
+  padding: 12px 24px;
   border: none;
   cursor: pointer;
-  border-radius: 1px; */
+  border-radius: 1px; 
+}*/
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="poster"] {
+    max-height: 30vh;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* For mobile phones: */
+  [class*="poster"] {
+    max-height: 40vh;
+  }
 }

@@ -1,5 +1,8 @@
 * {
   margin: 0;
-  background-color: #1e2129;
   scroll-behavior: smooth;
+}
+
+.App {
+  background-color: #111;
 }

@@ -1,0 +1,41 @@
+.jumbotron {
+  margin-top: 50px;
+  margin-left: 20px;
+  background-color: #111 !important;
+  padding: 0% !important;
+  color: aliceblue;
+}
+
+.icon_placeholder {
+  font-size: 3em;
+}
+
+.jumbotron_icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+
+.blockquote-footer {
+  font-size: 2vw !important;
+  display: inline !important;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="blockquote-footer"] {
+    font-size: 4vw !important;
+  }
+  [class*="icon_placeholder"] {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* For mobile phones: */
+  [class*="blockquote-footer"] {
+    font-size: 1.5vw !important;
+  }
+  [class*="icon_placeholder"] {
+    font-size: 4em;
+  }
+}

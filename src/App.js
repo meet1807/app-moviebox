@@ -1,17 +1,17 @@
 import React from "react";
-import Home from "./components/Home";
+import Home from "./home/Home";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faDatabase } from "@fortawesome/free-solid-svg-icons";
+import { faDatabase, faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 
 import "./App.css";
 
-library.add(faDatabase, faHeart);
+library.add(faDatabase, faHeart, faVideo);
 
 function App() {
   return (
-    <main role="main" className="App">
+    <main className="App">
       <Home />
     </main>
   );

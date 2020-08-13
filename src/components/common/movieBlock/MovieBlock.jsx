@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Row from "../row/Row";
 import Card from "../card/Card";
 import axios from "axios";
+
 import "./movieBlock.css";
 
 const MovieBlock = ({ title, fetchURL }) => {
