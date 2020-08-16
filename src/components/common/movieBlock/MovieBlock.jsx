@@ -13,9 +13,7 @@ const MovieBlock = ({ title, fetchURL }) => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const {
-          data: { results },
-        } = await axios.get(basicURL + fetchURL);
+        const { data: results } = await axios.get(basicURL + fetchURL);
         setMovies(results);
         return results;
       } catch (error) {

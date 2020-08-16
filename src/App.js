@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./home/Home";
+import Home from "./components/home/Home";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faDatabase, faVideo } from "@fortawesome/free-solid-svg-icons";
