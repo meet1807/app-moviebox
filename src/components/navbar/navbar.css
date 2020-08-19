@@ -1,0 +1,36 @@
+.navbar-brand {
+  margin-left: 5px;
+  margin-bottom: 5px !important;
+}
+
+.btn {
+  color: #ffffff !important;
+  /* margin-bottom: 5px; */
+}
+
+.btn:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+
+.dropdown-menu {
+  background: rgba(37, 37, 37, 0.61) !important;
+  border: none !important;
+  top: calc(100% + 20px) !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item {
+  color: #ffffff !important;
+  background: transparent !important;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline !important;
+}
+
+.form-control {
+  box-shadow: none !important;
+  color: #ffffff !important;
+  background: transparent !important;
+}

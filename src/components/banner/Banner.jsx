@@ -13,6 +13,7 @@ const Banner = () => {
         setMovie(results[Math.floor(Math.random() * results.length - 1)]);
         return results;
       } catch (error) {
+        //#TODO: clean up needed
         console.log("banner image fetch" + error);
       }
     }
@@ -29,9 +30,10 @@ const Banner = () => {
       style={{
         backgroundSize: "cover",
         backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
-        backgroundPosition: "center center",
+        backgroundPosition: "top center",
       }}
     >
+      <div className="gradient"></div>
       <div className="banner_content">
         <h1 className="banner_title">
           {movie?.title || movie?.name || movie?.original_name}

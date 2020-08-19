@@ -6,7 +6,7 @@ const Jumbotron = () => {
   return (
     <div className="jumbotron jumbotron-fluid">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row jumbo_content">
           <div
             className="col-1 icon_placeholder"
             style={{ display: "flex", alignItems: "center" }}
