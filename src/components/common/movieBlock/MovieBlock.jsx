@@ -7,6 +7,8 @@ import ModalVideo from "react-modal-video";
 //import YouTube from "react-youtube";
 import "./movieBlock.css";
 
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
 const MovieBlock = ({ title, fetchURL }) => {
   const basicURL = "/api/fetchMovies";
   const baseImageURL = "https://image.tmdb.org/t/p/original";
@@ -28,7 +30,7 @@ const MovieBlock = ({ title, fetchURL }) => {
         const {
           data: { results },
         } = await axios.get(basicURL + fetchURL);
-
+        console.log(results);
         setMovies(results);
         //return results;
       } catch (error) {
@@ -56,14 +58,15 @@ const MovieBlock = ({ title, fetchURL }) => {
     <div className="container-fluid ">
       <Row title={title} />
       <div className="row movie_container">
-        {movies.map((movie) => (
-          <Card
-            key={movie.id}
-            cardClick={() => handleClick(movie)}
-            title={movie.name}
-            path={`${baseImageURL}${movie.poster_path}`}
-          />
-        ))}
+        {movies &&
+          movies.map((movie) => (
+            <Card
+              key={movie.id}
+              cardClick={() => handleClick(movie)}
+              title={movie.name}
+              path={`${baseImageURL}${movie.poster_path}`}
+            />
+          ))}
       </div>
       <ModalVideo
         channel="youtube"

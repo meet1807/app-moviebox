@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./banner.css";
 
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 const Banner = () => {
   const basicURL = "/api/fetchMovies/fetchTrending";
   const [movie, setMovie] = useState([]);
