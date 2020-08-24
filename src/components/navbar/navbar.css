@@ -1,3 +1,8 @@
+.navbar {
+  position: fixed;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
 .navbar-brand {
   margin-left: 5px;
   margin-bottom: 5px !important;
@@ -14,7 +19,7 @@
 }
 
 .dropdown-menu {
-  background: rgba(37, 37, 37, 0.61) !important;
+  background: rgba(17, 17, 17, 0.91) !important;
   border: none !important;
   top: calc(100% + 20px) !important;
   color: #ffffff !important;
@@ -33,4 +38,9 @@
   box-shadow: none !important;
   color: #ffffff !important;
   background: transparent !important;
+  border-radius: 5 !important;
+}
+::placeholder {
+  color: #fff !important;
+  opacity: 0.5 !important;
 }

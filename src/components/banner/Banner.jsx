@@ -9,7 +9,9 @@ const Banner = () => {
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data: results } = await axios.get(basicURL);
+        const {
+          data: { results },
+        } = await axios.get(basicURL);
         setMovie(results[Math.floor(Math.random() * results.length - 1)]);
         return results;
       } catch (error) {

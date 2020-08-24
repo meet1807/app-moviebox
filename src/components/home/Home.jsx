@@ -2,13 +2,12 @@ import React from "react";
 import MovieBlock from "../common/movieBlock/MovieBlock";
 import Jumbotron from "../jumbotron/Jumbotron";
 import Banner from "../banner/Banner";
-import NavBar from "./../navbar/Navbar";
+
 import "./home.css";
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
       <Banner />
       <Jumbotron />
       <MovieBlock title="Trending Shows" fetchURL="/fetchTrending?limit=12" />

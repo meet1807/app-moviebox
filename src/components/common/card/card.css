@@ -3,25 +3,24 @@
 }
 .poster {
   object-fit: contain;
+  border-radius: 10px;
   width: 100%;
-  max-height: 30vh;
-  transition: transform 450ms;
+  max-height: 40vh;
+  transition: transform 0.5s;
 }
 
 .poster:hover {
   transform: scale(1.1);
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
+/* @media only screen and (max-width: 768px) {
   [class*="poster"] {
     max-height: 30vh;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  /* For mobile phones: */
   [class*="poster"] {
     max-height: 40vh;
   }
-}
+} */

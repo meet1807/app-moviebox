@@ -1,11 +1,8 @@
 .banner {
   display: grid;
   object-fit: contain;
-  /* position: absolute; */
   height: 550px;
   width: 100%;
-  position: absolute;
-
   top: 0;
 }
 
@@ -67,18 +64,19 @@
 
 .banner_fadeBottom {
   height: 7.5rem;
-  align-self: end;
+  margin-top: 250px;
+  /* align-self: end; */
   background-image: linear-gradient(
-    to bottom,
+    180deg,
     transparent,
-    rgba(27, 27, 27, 0.61),
+    rgba(37, 37, 37, 0.61),
     #111
   );
 }
 
 .banner_button:hover {
   transition: all 0.2s;
-  background: rgba(37, 37, 37, 0.61) !important;
+  background: rgba(37, 37, 37, 0.61);
 }
 
 .banner_button:after {

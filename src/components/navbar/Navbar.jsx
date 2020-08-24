@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import "./navbar.css";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [show, handleShow] = useState(false);
+  // const path = window.location.pathname;
+  //console.log(path);
+
   useEffect(() => {
+    //if (path === "/" || path === "/home") {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
         handleShow(true);
@@ -13,6 +17,8 @@ const NavBar = () => {
     return () => {
       window.removeEventListener("scroll", null);
     };
+    //} else if (path !== "/" || path !== "/home") handleShow(true);
+    //else handleShow(false);
   }, []);
 
   return (
@@ -53,23 +59,29 @@ const NavBar = () => {
                 className="dropdown-menu"
                 aria-labelledby="dropdownMenuButton"
               >
-                <Link className="dropdown-item" href="/action">
+                <Link className="dropdown-item" to="/genre/action">
                   Action
                 </Link>
-                <Link className="dropdown-item" href="/comedy">
+                <Link className="dropdown-item" to="/genre/comedy">
                   Comedy
                 </Link>
-                <Link className="dropdown-item" href="Romance">
+                <Link className="dropdown-item" to="/genre/Romance">
                   Romance
+                </Link>
+                <Link className="dropdown-item" to="/genre/horror">
+                  Horror
+                </Link>
+                <Link className="dropdown-item" to="/genre/documentaries">
+                  Documentaries
                 </Link>
               </div>
             </div>
           </li>
-          <li className="nav-item ">
+          {/* <li className="nav-item ">
             <NavLink className="nav-link" to="/login">
               login
             </NavLink>
-          </li>
+          </li> */}
         </ul>
         <form className="form-inline mt-2 mt-md-0">
           <input
@@ -78,13 +90,13 @@ const NavBar = () => {
             placeholder="Search"
             aria-label="Search"
           />
-          <button className="btn  my-2 my-sm-0" type="submit">
+          {/* <button className="btn  my-2 my-sm-0" type="submit">
             Search
-          </button>
+          </button> */}
         </form>
       </div>
     </nav>
   );
 };
 
-export default NavBar;
+export default withRouter(NavBar);
